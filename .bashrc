@@ -220,7 +220,17 @@ if [ -s ~/.nvm/nvm.sh ]; then
 fi
 
 ## ------------------------------
-## -- 3) User-customized code  --
+## -- 3) History  --
+## ------------------------------
+export HISTFILESIZE=10000000
+export HISTSIZE=10000
+export PROMPT_COMMAND="history -a"
+export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
+export HISTIGNORE="pwd:ls:ll:ls -al:"
+export HISTCONTROL="ignoredups"
+
+## ------------------------------
+## -- 4) User-customized code  --
 ## ------------------------------
 
 ## Define any user-specific variables you want here.
