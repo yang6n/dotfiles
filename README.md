@@ -1,5 +1,7 @@
 dotfiles.git
 ============
+
+[![Join the chat at https://gitter.im/yang6n/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yang6n/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
 configure your `bash` and `emacs` development environment as follows:
 
