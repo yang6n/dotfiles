@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# cfr
+alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
+
