@@ -8,7 +8,8 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="jyang"
+#ZSH_THEME="jyang"
+ZSH_THEME="half-life"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -128,3 +129,4 @@ export HISTCONTROL="ignoredups"
 ## Define any user-specific variables you want here.
 source ~/.zshrc_custom
 
+alias wake112="wakeonlan 40:8D:5C:B6:90:00"
