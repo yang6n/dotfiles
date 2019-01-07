@@ -67,8 +67,16 @@ export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
 export HISTIGNORE="pwd:ls:ll:ls -al:"
 export HISTCONTROL="ignoredups"
 
-## Define any user-specific variables you want here.
+# 7) Define any user-specific variables you want here.
 source ~/.zshrc_custom
 
-# alias
+# 8) Alias
 alias wake112="wakeonlan 40:8D:5C:B6:90:00"
+
+# 9) Pathes
+export JAVA_HOME=$HOME/apps/jdk/
+export SPARK_HOME=$HOME/apps/spark/
+export HIVE_HOME=$HOME/apps/hive/
+export HADOOP_HOME=$HOME/apps/hadoop/
+
+export PATH=$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$PATH
