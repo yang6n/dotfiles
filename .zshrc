@@ -74,9 +74,18 @@ source ~/.zshrc_custom
 alias wake112="wakeonlan 40:8D:5C:B6:90:00"
 
 # 9) Pathes
-export JAVA_HOME=$HOME/apps/jdk
-export SPARK_HOME=$HOME/apps/spark
-export HIVE_HOME=$HOME/apps/hive
-export HADOOP_HOME=$HOME/apps/hadoop
+export JAVA_HOME=$HOME/apps/jdk/latest
+export SPARK_HOME=$HOME/apps/spark/latest
+export HIVE_HOME=$HOME/apps/hive/latest
+export HADOOP_HOME=$HOME/apps/hadoop/latest
+export FLUTTER_HOME=$HOME/apps/flutter/latest
+export CASSANDRA_HOME=$HOME/apps/cassandra/latest
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
 
-export PATH=$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$PATH
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin
+
+export JDBC_DRIVER_HOME=/home/jyang/apps/jdbc-drivers
+
+export CLASSPATH=.:$HADOOP_HOME/lib/*:$HIVE_HOME/lib/*:$JDBC_DRIVER_HOME/mysql/mysql-connector-java-8.0.15.jar
+
