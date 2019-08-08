@@ -54,6 +54,7 @@ export EDITOR="$VISUAL"
 # 4) grep options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31' # green for matches
+unset GREP_OPTIONS
 
 # 5) sort options
 unset LANG
@@ -82,8 +83,9 @@ export FLUTTER_HOME=$HOME/apps/flutter/latest
 export CASSANDRA_HOME=$HOME/apps/cassandra/latest
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
+export KAFKA_HOME=$HOME/apps/kafka/latest
 
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$KAFKA_HOME/bin
 
 export JDBC_DRIVER_HOME=/home/jyang/apps/jdbc-drivers
 
