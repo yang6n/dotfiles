@@ -84,8 +84,9 @@ export CASSANDRA_HOME=$HOME/apps/cassandra/latest
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export KAFKA_HOME=$HOME/apps/kafka/latest
+export RUST_HOME=$HOME/.cargo/
 
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$KAFKA_HOME/bin
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$KAFKA_HOME/bin:$RUST_HOME/bin
 
 export JDBC_DRIVER_HOME=/home/jyang/apps/jdbc-drivers
 
