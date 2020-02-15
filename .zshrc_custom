@@ -30,6 +30,6 @@ export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIV
 
 # 3) Vault
 export VAULT_ADDR='http://127.0.0.1:8200'
-complete -o nospace -C /home/jyang/apps/vault/vault_1.2.3/vault vault
-complete -o nospace -C /usr/local/bin/vault vault
+alias vault='/home/jyang/apps/vault/vault_1.2.3/vault'
+alias vault='/usr/local/bin/vault'
 
