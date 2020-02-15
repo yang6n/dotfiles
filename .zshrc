@@ -22,7 +22,21 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_PAPER="en_US.UTF-8"
+export LC_NAME="en_US.UTF-8"
+export LC_ADDRESS="en_US.UTF-8"
+export LC_TELEPHONE="en_US.UTF-8"
+export LC_MEASUREMENT="en_US.UTF-8"
+export LC_IDENTIFICATION="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -71,24 +85,7 @@ export HISTCONTROL="ignoredups"
 # 7) Define any user-specific variables you want here.
 source ~/.zshrc_custom
 
-# 8) Alias
-alias wake112="wakeonlan 40:8D:5C:B6:90:00"
-
 # 9) Pathes
-export JAVA_HOME=$HOME/apps/jdk/latest
-export SPARK_HOME=$HOME/apps/spark/latest
-export HIVE_HOME=$HOME/apps/hive/latest
-export HADOOP_HOME=$HOME/apps/hadoop/latest
-export FLUTTER_HOME=$HOME/apps/flutter/latest
-export CASSANDRA_HOME=$HOME/apps/cassandra/latest
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export KAFKA_HOME=$HOME/apps/kafka/latest
-export RUST_HOME=$HOME/.cargo/
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin
 
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$KAFKA_HOME/bin:$RUST_HOME/bin
-
-export JDBC_DRIVER_HOME=/home/jyang/apps/jdbc-drivers
-
-export CLASSPATH=.:$HADOOP_HOME/lib/*:$HIVE_HOME/lib/*:$JDBC_DRIVER_HOME/mysql/mysql-connector-java-8.0.15.jar
-
+autoload -U +X bashcompinit && bashcompinit
