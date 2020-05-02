@@ -86,6 +86,6 @@ export HISTCONTROL="ignoredups"
 source ~/.zshrc_custom
 
 # 9) Pathes
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 autoload -U +X bashcompinit && bashcompinit
