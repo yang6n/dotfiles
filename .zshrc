@@ -86,6 +86,10 @@ export HISTCONTROL="ignoredups"
 source ~/.zshrc_custom
 
 # 9) Pathes
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
+export ANACONDA_HOME=/home/jyang/apps/anaconda3
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin:$ANACONDA_HOME/bin
+
+# 10) Auto Completion
+source <(kubectl completion zsh)
 
 autoload -U +X bashcompinit && bashcompinit
