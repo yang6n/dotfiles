@@ -85,7 +85,11 @@ export HISTCONTROL="ignoredups"
 # 7) Define any user-specific variables you want here.
 source ~/.zshrc_custom
 
+# 8) Define X11 DISPLAY
+export DISPLAY=:0.0
+
 # 9) Pathes
+export PATH=$PATH:/opt/gradle/gradle-6.5/bin
 export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 autoload -U +X bashcompinit && bashcompinit
