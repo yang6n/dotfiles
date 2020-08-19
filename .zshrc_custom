@@ -10,7 +10,8 @@ alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
 alias dbgen="~/git/tpch-dbgen/dbgen"
 alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
 alias dex2jar="~/apps/dex-tools/latest/d2j-dex2jar.sh"
-
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 
 # 2) Pathes
 export JAVA_HOME=$HOME/apps/jdk/latest
