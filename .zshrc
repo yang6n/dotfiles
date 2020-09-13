@@ -1,9 +1,8 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH=/home/jyang/.oh-my-zsh
+dexport PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
 
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="jyang"
-#ZSH_THEME="half-life"
+ZSH_THEME="half-life"
 
 # CASE_SENSITIVE="true"
 
@@ -89,10 +88,6 @@ source ~/.zshrc_custom
 export DISPLAY=:0.0
 
 # 9) Pathes
-export ANACONDA_HOME=/home/jyang/apps/anaconda3
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin:$ANACONDA_HOME/bin:/opt/gradle/gradle-6.5/bin
-
-# 10) Auto Completion
-source <(kubectl completion zsh)
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 autoload -U +X bashcompinit && bashcompinit

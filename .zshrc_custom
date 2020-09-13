@@ -6,31 +6,37 @@ alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
 alias pi3='ssh jyang@192.168.1.107'
 alias pi4='ssh jyang@192.168.1.163'
-alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
+alias cfr="java -jar ~/apps/cfr/cfr_0_122.jar"
 alias dbgen="~/git/tpch-dbgen/dbgen"
 alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
 alias dex2jar="~/apps/dex-tools/latest/d2j-dex2jar.sh"
 alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias opens="open -a 'Sublime Text' "
 
 # 2) Pathes
+export ANACONDA_HOME=$HOME/apps/anaconda3
 export JAVA_HOME=$HOME/apps/jdk/latest
 export SPARK_HOME=$HOME/apps/spark/latest
 export HIVE_HOME=$HOME/apps/hive/latest
 export HADOOP_HOME=$HOME/apps/hadoop/latest
-export FLUTTER_HOME=$HOME/apps/flutter/latest
-export CASSANDRA_HOME=$HOME/apps/cassandra/latest
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
 export KAFKA_HOME=$HOME/apps/kafka/latest
-export RUST_HOME=$HOME/.cargo/
-export JDBC_DRIVER_HOME=/home/jyang/apps/jdbc-drivers
-export CLASSPATH=.:$HADOOP_HOME/lib/*:$HIVE_HOME/lib/*:$JDBC_DRIVER_HOME/mysql/mysql-connector-java-8.0.15.jar
+export JDBC_DRIVER_HOME=$HOME/apps/jdbc-drivers
+export GRADLE_HOME=$HOME/gradle/latest
 
-export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$KAFKA_HOME/bin:$RUST_HOME/bin
+#export FLUTTER_HOME=$HOME/apps/flutter/latest
+#export CASSANDRA_HOME=$HOME/apps/cassandra/latest
+#export GOROOT=/usr/local/go
+#export GOPATH=$HOME/go
+#export RUST_HOME=$HOME/.cargo/
+
+export CLASSPATH=.:$HADOOP_HOME/lib/*:$HIVE_HOME/lib/*:$JDBC_DRIVER_HOME/mysql/mysql-connector-java-latest.jar
+
+export PATH=.:$PATH:$HOME/bin:/usr/local/bin:$JAVA_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$HADOOP_HOME/bin:$KAFKA_HOME/bin
+export PATH=.:$PATH:$ANACONDA_HOME/bin:$GRADLE_HOME/bin
+
+export PATH=.:$PATH:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bin:$RUST_HOME/bin
 
 # 3) Vault
 export VAULT_ADDR='http://127.0.0.1:8200'
-alias vault='/home/jyang/apps/vault/vault_1.2.3/vault'
-alias vault='/usr/local/bin/vault'
-
+alias vault=/usr/local/bin/vault
