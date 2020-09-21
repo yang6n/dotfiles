@@ -2,6 +2,7 @@
 
 # 1) Alias
 alias wake112="wakeonlan 40:8D:5C:B6:90:00"
+alias box='ssh jyang@192.168.1.112'
 alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
 alias pi3='ssh jyang@192.168.1.107'
@@ -16,7 +17,8 @@ alias opens="open -a 'Sublime Text' "
 
 # 2) Pathes
 export ANACONDA_HOME=$HOME/apps/anaconda3
-export JAVA_HOME=$HOME/apps/jdk/latest
+#export JAVA_HOME=$HOME/apps/jdk/latest
+export JAVA_HOME=$(/usr/libexec/java_home)
 export SPARK_HOME=$HOME/apps/spark/latest
 export HIVE_HOME=$HOME/apps/hive/latest
 export HADOOP_HOME=$HOME/apps/hadoop/latest
