@@ -1,8 +1,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="half-life"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="half-life"
 
 # CASE_SENSITIVE="true"
 
@@ -91,3 +91,6 @@ export DISPLAY=:0.0
 export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 autoload -U +X bashcompinit && bashcompinit
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
