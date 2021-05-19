@@ -1,8 +1,17 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="half-life"
+#ZSH_THEME="jyang"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # CASE_SENSITIVE="true"
 
@@ -76,7 +85,7 @@ export LC_ALL=POSIX
 # 6) History  
 export HISTFILESIZE=10000000
 export HISTSIZE=10000
-export PROMPT_COMMAND="history -a"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
 export HISTIGNORE="pwd:ls:ll:ls -al:"
 export HISTCONTROL="ignoredups"
@@ -94,3 +103,22 @@ autoload -U +X bashcompinit && bashcompinit
 
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/jianyang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/jianyang/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/jianyang/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/jianyang/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
