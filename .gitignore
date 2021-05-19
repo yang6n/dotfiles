@@ -2,3 +2,9 @@
 .DS_Store
 target/
 *.iml
+
+*.jks
+*.key
+*.pem
+*.p8
+
