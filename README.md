@@ -17,10 +17,10 @@ ln -sb dotfiles/.zshrc_custom .
 
 mkdir /etc/update-motd.d/
 
-ln -sb dotfiles/update-motd.d/00-header /etc/update-motd.d/
-ln -sb dotfiles/update-motd.d/10-sysinfo /etc/update-motd.d/
-ln -sb dotfiles/update-motd.d/20-uname /etc/update-motd.d/
-ln -sb dotfiles/update-motd.d/90-footer /etc/update-motd.d/
+cp dotfiles/update-motd.d/00-header /etc/update-motd.d/
+cp dotfiles/update-motd.d/10-sysinfo /etc/update-motd.d/
+cp dotfiles/update-motd.d/20-uname /etc/update-motd.d/
+cp dotfiles/update-motd.d/90-footer /etc/update-motd.d/
 
 chmod +x /etc/update-motd.d/*
 ```
