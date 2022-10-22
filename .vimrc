@@ -18,4 +18,4 @@ set hls
 set lbr
 
 " Change colorscheme from default to delek
-colorscheme delek
+" colorscheme delek

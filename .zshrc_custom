@@ -35,7 +35,7 @@ alias wake112="wakeonlan 40:8D:5C:B6:90:00"
 alias box='ssh jyang@192.168.1.112'
 alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
-alias pi3='ssh jyang@192.168.1.107'
+alias pi3='ssh jyang@192.168.1.45'
 alias pi4='ssh jyang@192.168.1.163'
 alias mini='ssh jyang@192.168.1.9'
 alias cfr="java -jar ~/apps/cfr/cfr-0.151.jar"
@@ -53,6 +53,7 @@ alias dce="docker-compose exec"
 alias dcs="docker-compose start"
 alias dcrs="docker-compose restart"
 alias dcl="docker-compose logs -f"
+alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.112" docker'
 
 # 11) Vault
 export VAULT_ADDR='http://127.0.0.1:8200'
@@ -60,6 +61,7 @@ alias vault=/usr/local/bin/vault
 
 # 30) Docker
 alias dzpl="docker run -p 9001:8080 --rm -v $ZEPPELIN_HOME/logs:/logs -v $ZEPPELIN_HOME/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0"
+#export DOCKER_HOST="ssh://jyang@192.168.1.112"
 
 # 97) AWS Credentials
 
@@ -67,3 +69,4 @@ alias dzpl="docker run -p 9001:8080 --rm -v $ZEPPELIN_HOME/logs:/logs -v $ZEPPEL
 
 # 99) Variables
 
+export PATH=/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/Caskroom/miniforge/base/condabin:/Applications/SnowSQL.app/Contents/MacOS:.:.:.:.:/Users/jyang/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/jyang/bin:/usr/local/bin:/Users/jyang/Library/Java/JavaVirtualMachines/azul-11.0.12/Contents/Home/bin:/Users/jyang/apps/maven/latest/bin:/Users/jyang/apps/spark/latest/bin:/Users/jyang/apps/hive/latest/bin:/Users/jyang/apps/hadoop/latest/bin:/Users/jyang/apps/kafka/latest/bin:/Users/jyang/apps/anaconda3/bin:/Users/jyang/gradle/latest/bin:/bin:/bin:/bin:/bin:/bin:/usr/local/opt/libpq/bin:/Users/jianyang/Library/Python/2.7/bin/:/Users/jyang/apps/spark/latest/bin:/Users/jyang/apps/spark/latest/python/:/Users/jyang/bin:/usr/local/bin:/Users/jyang/.local/bin:/Users/jyang/.linkerd2/bin:/home/student/.linkerd2/bin
