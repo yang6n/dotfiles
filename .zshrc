@@ -1,8 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/jyang/.oh-my-zsh
 
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="jyang"
 #ZSH_THEME="half-life"
 
 # CASE_SENSITIVE="true"
