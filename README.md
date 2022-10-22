@@ -11,13 +11,18 @@ configure your `bash` and `emacs` development environment as follows:
 cd $HOME
 git clone https://github.com/yang6n/dotfiles.git
 ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
 ln -sb dotfiles/.vimrc .
 ln -sb dotfiles/.zshrc .
 ln -sb dotfiles/.zshrc_custom .
-ln -sb ~/dotfiles/theme/jyang.zsh-theme ~/.oh-my-zsh/themes
+
+mkdir /etc/update-motd.d/
+
+ln -sb dotfiles/update-motd.d/00-header /etc/update-motd.d/
+ln -sb dotfiles/update-motd.d/10-sysinfo /etc/update-motd.d/
+ln -sb dotfiles/update-motd.d/20-uname /etc/update-motd.d/
+ln -sb dotfiles/update-motd.d/90-footer /etc/update-motd.d/
+
+chmod +x /etc/update-motd.d/*
 ```
 
 See also http://github.com/yang6n/setup to install prerequisite

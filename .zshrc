@@ -8,8 +8,6 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/jyang/.oh-my-zsh
 
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="jyang"
 #ZSH_THEME="half-life"
 
 # CASE_SENSITIVE="true"
@@ -92,7 +90,11 @@ export HISTCONTROL="ignoredups"
 # 7) Define any user-specific variables you want here.
 source ~/.zshrc_custom
 
+# 8) Define X11 DISPLAY
+export DISPLAY=:0.0
+
 # 9) Pathes
+export PATH=$PATH:/opt/gradle/gradle-6.5/bin
 export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 # 10) WakeOnLan
