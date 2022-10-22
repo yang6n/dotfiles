@@ -2,8 +2,10 @@
 
 # 1) Pathes
 export ANACONDA_HOME=$HOME/apps/anaconda3
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+#export JAVA_HOME=/Users/jianyang/Library/Java/JavaVirtualMachines/corretto-1.8.0_322/Contents/Home
+#export JAVA_HOME=/Users/jianyang/Library/Java/JavaVirtualMachines/openjdk-15.0.2/Contents/Home
 export MAVEN_HOME=$HOME/apps/maven/latest
 export SPARK_HOME=$HOME/apps/spark/latest
 export HIVE_HOME=$HOME/apps/hive/latest
@@ -29,15 +31,16 @@ export PATH=.:$PATH:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bi
 
 export PATH=$PATH:$LIBPQ/bin:/Users/jianyang/Library/Python/2.7/bin/
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/python/
+export PATH="$PATH:/Users/jianyang/Library/Application Support/Coursier/bin"
 
 # 2) Alias
 alias wake112="wakeonlan 40:8D:5C:B6:90:00"
 alias box='ssh jyang@192.168.1.112'
 alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
-alias pi3='ssh jyang@192.168.1.107'
+alias pi3='ssh jyang@192.168.1.45'
 alias pi4='ssh jyang@192.168.1.163'
-alias mini='ssh jyang@192.168.1.9'
+alias mini='ssh jyang@192.168.1.176'
 alias cfr="java -jar ~/apps/cfr/cfr-0.151.jar"
 alias dbgen="~/git/tpch-dbgen/dbgen"
 alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
@@ -46,13 +49,14 @@ alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpas
 alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 alias opens="open -a 'Sublime Text' "
 alias ec2="ssh jyang@10.66.63.8"
-alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path /Users/jianyang/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
-alias atj="java -jar ~/Downloads/avro-tools-1.10.0.jar tojson"
+alias atj="java -jar ~/apps/avro-tools/avro-tools-1.10.0.jar tojson"
 alias dc="docker-compose"
 alias dce="docker-compose exec"
 alias dcs="docker-compose start"
 alias dcrs="docker-compose restart"
 alias dcl="docker-compose logs -f"
+alias laws="aws --endpoint-url=http://localhost:4566"
+#alias tpws="eval $(tpw)"
 
 # 11) Vault
 export VAULT_ADDR='http://127.0.0.1:8200'
@@ -61,9 +65,24 @@ alias vault=/usr/local/bin/vault
 # 30) Docker
 alias dzpl="docker run -p 9001:8080 --rm -v $ZEPPELIN_HOME/logs:/logs -v $ZEPPELIN_HOME/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0"
 
+# 96) PackageCloud
+export DATA_PLATFORM_ACCESS_TOKEN=
+
 # 97) AWS Credentials
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_DEFAULT_REGION=us-east-1
 
 # 98) Snowflake Credentials
+export SNOWFLAKE_PRIVATE_KEY_LOCATION="${HOME}/.ssh"
+export SNOWFLAKE_PRIVATE_KEY_FILE="${HOME}/.ssh/rsa_key.p8"
+export SNOWFLAKE_PRIVATE_KEY_PASSPHRASE=
+export SNOWFLAKE_USER=
+export SNOWFLAKE_WAREHOUSE=DATA_ENG_WH_M
+export SNOWFLAKE_DATABASE=DEVELOPMENT
+export SNOWFLAKE_SCHEMA=PUBLIC
+export SNOWFLAKE_ROLE=DATA_ENGINEER
 
 # 99) Variables
+export GITHUB_API_TOKEN=
 

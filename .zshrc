@@ -66,7 +66,6 @@ alias ..='cd ..'
 alias ...='cd ..;cd ..'
 alias md='mkdir'
 alias cl='clear'
-alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
 
 # 3) Text and editor commands
@@ -103,7 +102,7 @@ autoload -U +X bashcompinit && bashcompinit
 
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+#[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -122,3 +121,6 @@ unset __conda_setup
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
