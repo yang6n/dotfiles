@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/jyang/.oh-my-zsh
 
@@ -90,4 +97,11 @@ export DISPLAY=:0.0
 export PATH=$PATH:/opt/gradle/gradle-6.5/bin
 export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
+# 10) WakeOnLan
+alias wakebox='wakeonlan 40:8d:5c:b6:90:00'
+
 autoload -U +X bashcompinit && bashcompinit
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
