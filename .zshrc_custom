@@ -1,16 +1,30 @@
 #!/bin/bash
 
 # 1) Alias
-alias wake112="wakeonlan 40:8D:5C:B6:90:00"
+alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
+alias atj="java -jar ~/Downloads/avro-tools-1.10.0.jar tojson"
+alias box='ssh jyang@192.168.1.112'
+alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
+alias cfr="java -jar ~/apps/cfr/cfr-0.151.jar"
+alias dbgen="~/git/tpch-dbgen/dbgen"
+alias dc="docker-compose"
+alias dce="docker-compose exec"
+alias dcl="docker-compose logs -f"
+alias dcrs="docker-compose restart"
+alias dcs="docker-compose start"
+alias dex2jar="~/apps/dex-tools/latest/d2j-dex2jar.sh"
+alias ec2="ssh jyang@10.66.63.8"
+alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias mini='ssh jyang@192.168.1.9'
+alias opens="open -a 'Sublime Text' "
 alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
 alias pi3='ssh jyang@192.168.1.45'
 alias pi4='ssh jyang@192.168.1.163'
-alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
-alias dbgen="~/git/tpch-dbgen/dbgen"
-alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
-alias dex2jar="~/apps/dex-tools/latest/d2j-dex2jar.sh"
-
+alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.112" docker'
+alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path $HOME/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
+alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
+alias wake112="wakeonlan 40:8D:5C:B6:90:00"
 
 # 2) Pathes
 export ANACONDA_HOME=$HOME/apps/anaconda3
@@ -44,31 +58,6 @@ export PATH=.:$PATH:$FLUTTER_HOME/bin:$CASSANDRA_HOME/bin:$GOPATH/bin:$GOROOT/bi
 
 export PATH=$PATH:$LIBPQ/bin:$HOME/Library/Python/2.7/bin/
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/python/
-
-# 2) Alias
-alias wake112="wakeonlan 40:8D:5C:B6:90:00"
-alias box='ssh jyang@192.168.1.112'
-alias pi0='ssh jyang@192.168.1.159'
-alias pi2='ssh jyang@192.168.1.108'
-alias pi3='ssh jyang@192.168.1.45'
-alias pi4='ssh jyang@192.168.1.163'
-alias mini='ssh jyang@192.168.1.9'
-alias cfr="java -jar ~/apps/cfr/cfr-0.151.jar"
-alias dbgen="~/git/tpch-dbgen/dbgen"
-alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
-alias dex2jar="~/apps/dex-tools/latest/d2j-dex2jar.sh"
-alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
-alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
-alias opens="open -a 'Sublime Text' "
-alias ec2="ssh jyang@10.66.63.8"
-alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path $HOME/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
-alias atj="java -jar ~/Downloads/avro-tools-1.10.0.jar tojson"
-alias dc="docker-compose"
-alias dce="docker-compose exec"
-alias dcs="docker-compose start"
-alias dcrs="docker-compose restart"
-alias dcl="docker-compose logs -f"
-alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.112" docker'
 
 # 11) Vault
 export VAULT_ADDR='http://127.0.0.1:8200'
