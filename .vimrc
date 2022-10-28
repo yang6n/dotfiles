@@ -17,5 +17,10 @@ set hls
 " Wrap text instead of being on one line
 set lbr
 
-" Change colorscheme from default to delek
-colorscheme delek
+
+set background=dark
+
+" Change colorscheme from default to gruvbox
+" colorscheme default
+"colorscheme torte
+colorscheme slate

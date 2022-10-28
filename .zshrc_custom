@@ -4,7 +4,7 @@
 alias wake112="wakeonlan 40:8D:5C:B6:90:00"
 alias pi0='ssh jyang@192.168.1.159'
 alias pi2='ssh jyang@192.168.1.108'
-alias pi3='ssh jyang@192.168.1.145'
+alias pi3='ssh jyang@192.168.1.45'
 alias pi4='ssh jyang@192.168.1.163'
 alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
 alias dbgen="~/git/tpch-dbgen/dbgen"
