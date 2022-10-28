@@ -8,7 +8,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="half-life"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # CASE_SENSITIVE="true"
 
@@ -82,7 +82,7 @@ export LC_ALL=POSIX
 # 6) History  
 export HISTFILESIZE=10000000
 export HISTSIZE=10000
-export PROMPT_COMMAND="history -a"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
 export HISTIGNORE="pwd:ls:ll:ls -al:"
 export HISTCONTROL="ignoredups"
@@ -94,15 +94,48 @@ source ~/.zshrc_custom
 export DISPLAY=:0.0
 
 # 9) Pathes
-export PATH=$PATH:/opt/gradle/gradle-6.5/bin
 export PATH=.:$PATH:$HOME/bin:/usr/local/bin:~/.local/bin
 
 # 10) WakeOnLan
 alias wakebox='wakeonlan 40:8d:5c:b6:90:00'
 
 autoload -U +X bashcompinit && bashcompinit
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# brew
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
