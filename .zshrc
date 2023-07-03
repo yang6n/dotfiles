@@ -107,7 +107,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+#[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
