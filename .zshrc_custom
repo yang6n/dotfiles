@@ -3,7 +3,7 @@
 # 1) Alias
 alias apktool="java -jar ~/apps/apktool/latest/apktool.jar"
 alias atj="java -jar ~/Downloads/avro-tools-1.10.0.jar tojson"
-alias box='ssh jyang@192.168.1.112'
+alias box='ssh jyang@192.168.1.13'
 alias cfr="java -jar ~/applications/cfr/cfr_0_122.jar"
 alias cfr="java -jar ~/apps/cfr/cfr-0.151.jar"
 alias dbgen="~/git/tpch-dbgen/dbgen"
@@ -17,15 +17,15 @@ alias ec2="ssh jyang@10.66.63.8"
 alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
 alias mini='ssh jyang@192.168.1.9'
 alias opens="open -a 'Sublime Text' "
-alias pi0='ssh jyang@192.168.1.159'
-alias pi2='ssh jyang@192.168.1.108'
-alias pi3='ssh jyang@192.168.1.45'
-alias pi4='ssh jyang@192.168.1.163'
+alias pi0='ssh jyang@192.168.1.40'
+alias pi2='ssh jyang@192.168.1.41'
+alias pi3='ssh jyang@192.168.1.42'
+alias pi4='ssh jyang@192.168.1.44'
 alias ddwrt='ssh root@192.168.1.2'
-alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.112" docker'
+alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.13" docker'
 alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path $HOME/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
 alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
-alias wake112="wakeonlan 40:8D:5C:B6:90:00"
+alias wake13="wakeonlan 40:8D:5C:B6:90:00"
 alias awss3="aws --endpoint-url http://minio.theyangs.us:9000 s3"
 
 # 2) Pathes
@@ -69,7 +69,7 @@ alias vault=/usr/local/bin/vault
 
 # 30) Docker
 alias dzpl="docker run -p 9001:8080 --rm -v $ZEPPELIN_HOME/logs:/logs -v $ZEPPELIN_HOME/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.9.0"
-#export DOCKER_HOST="ssh://jyang@192.168.1.112"
+#export DOCKER_HOST="ssh://jyang@192.168.1.13"
 
 # 97) AWS Credentials
 
