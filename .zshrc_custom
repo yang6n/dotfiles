@@ -18,9 +18,11 @@ alias guid="uuidgen | tr -d - | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcop
 alias mini='ssh jyang@192.168.1.9'
 alias opens="open -a 'Sublime Text' "
 alias pi0='ssh jyang@192.168.1.40'
+alias pi02w='ssh jyang@192.168.1.48'
 alias pi2='ssh jyang@192.168.1.41'
 alias pi3='ssh jyang@192.168.1.42'
 alias pi4='ssh jyang@192.168.1.44'
+alias pi5='ssh jyang@192.168.1.46'
 alias ddwrt='ssh root@192.168.1.2'
 alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.13" docker'
 alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path $HOME/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
