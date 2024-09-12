@@ -22,8 +22,10 @@ alias pi02w='ssh jyang@192.168.1.48'
 alias pi2='ssh jyang@192.168.1.41'
 alias pi3='ssh jyang@192.168.1.42'
 alias pi4='ssh jyang@192.168.1.44'
-alias pi5='ssh jyang@192.168.1.46'
-alias ddwrt='ssh root@192.168.1.2'
+alias pi4l='ssh jyang@192.168.1.45'
+alias pi5='ssh jyang@192.168.1.47'
+alias pi5b='ssh jyang@192.168.1.50'
+alias wrt='ssh root@192.168.1.2'
 alias sdocker='DOCKER_HOST="ssh://jyang@192.168.1.13" docker'
 alias sss="snowsql -a procore -u 'jay.yang@procore.com' --private-key-path $HOME/.ssh/rsa_key.p8 -d DEVELOPMENT -s JY_TEST"
 alias uuid="uuidgen | tr -d '\n' | tr '[:upper:]' '[:lower:]'  | pbcopy && pbpaste && echo"
@@ -32,10 +34,7 @@ alias awss3="aws --endpoint-url http://minio.theyangs.us:9000 s3"
 
 # 2) Pathes
 export ANACONDA_HOME=$HOME/apps/anaconda3
-#export JAVA_HOME=$HOME/apps/jdk/latest
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-#export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-export JAVA_HOME=$(/usr/libexec/java_home -v 15)
+export JAVA_HOME=/usr/lib/jvm/default-java
 export CLASSPATH=.:$HADOOP_HOME/lib/*:$HIVE_HOME/lib/*:$JDBC_DRIVER_HOME/mysql/mysql-connector-java-8.0.15.jar
 export GRADLE_HOME=$HOME/gradle/latest
 export HADOOP_HOME=$HOME/apps/hadoop/latest
@@ -79,4 +78,3 @@ alias dzpl="docker run -p 9001:8080 --rm -v $ZEPPELIN_HOME/logs:/logs -v $ZEPPEL
 
 # 99) Variables
 
-export PATH=/opt/homebrew/opt/curl/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/Caskroom/miniforge/base/condabin:/Applications/SnowSQL.app/Contents/MacOS:.:.:.:.:$HOME/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:$HOME/bin:/usr/local/bin:$HOME/Library/Java/JavaVirtualMachines/azul-11.0.12/Contents/Home/bin:$HOME/apps/maven/latest/bin:$HOME/apps/spark/latest/bin:$HOME/apps/hive/latest/bin:$HOME/apps/hadoop/latest/bin:$HOME/apps/kafka/latest/bin:$HOME/apps/anaconda3/bin:$HOME/gradle/latest/bin:/bin:/bin:/bin:/bin:/bin:/usr/local/opt/libpq/bin:$HOME/Library/Python/2.7/bin/:$HOME/apps/spark/latest/bin:$HOME/apps/spark/latest/python/:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.linkerd2/bin:/home/student/.linkerd2/bin
